@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>For U</title>
+</head>
+
+<body>
+    <div class="alert alert-danger alert-dismissible fade show d-none text-center" role="alert">
+        <h1>Ilhan juga <strong>Sayang</strong> Mutiaa &#9829;</h1>
+        <button type="button" class="close myClose" data-dismiss="alert" aria-label="Close" onClick="A3()">
+            <h1> <span aria-hidden="true">&times;</span></h1>
+        </button>
+    </div>
+    <div class="container">
+
+        <h1 class=" text-center mt-5">Mutia sayang Ilhan ga?</h1>
+        <div class="all-button">
+
+            <a link="#demo"
+                ping="https://script.google.com/macros/s/AKfycbzAqFhGIhycnDlY1beCFHVJlsqVu0fL0z63L-41JJ3IT5DQ7pM0j61SJDpJQ0JMASx4/exec"
+                id="by" class="button-17 button-yes absolute" role="button" onClick="A1()">
+                <h3>Sayang Bangett</h3>
+            </a>
+
+
+            <button id="Bn" class="button-17 button-no absolute" role="button" onMouseOver="A2()">
+                <h3>Gak</h3>
+            </button>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    let flag = 1
+    let myAlert = document.querySelector('.alert');
+    function A1() {
+
+        myAlert.classList.add('d-block');
+        myAlert.classList.remove('d-none');
+    }
+    function A3() {
+        myAlert.classList.add('d-none');
+        myAlert.classList.remove('d-block');
+    }
+
+    function A2() {
+        console.log('object');
+        if (flag == 1) {
+            Bn.style.top = '140px'
+            Bn.style.left = '100px'
+            flag = 2
+        }
+
+        else if (flag == 2) {
+            Bn.style.top = '140px'
+            Bn.style.left = '250px'
+            flag = 1
+        }
+    }
+</script>
+
+</html>
