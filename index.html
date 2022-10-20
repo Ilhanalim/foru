@@ -24,12 +24,12 @@
         <h1 class=" text-center mt-5">Mutia sayang Ilhan ga?</h1>
         <div class="all-button">
 
-            <a link="#demo"
-                ping="https://script.google.com/macros/s/AKfycbzAqFhGIhycnDlY1beCFHVJlsqVu0fL0z63L-41JJ3IT5DQ7pM0j61SJDpJQ0JMASx4/exec?name=trackClick&section=BlogPost&link=https://ilhanalim.github.io/foru/"
-                id=" by" class="button-17 button-yes absolute" role="button" onClick="A1()">
-                <h3>Sayang Bangett</h3>
-            </a>
-
+            <form name="track-click">
+                <input type="text" value="user" name="value" class="d-none">
+                <button id=" by" class="button-17 button-yes absolute" type="submit" role="button" onClick="A1()">
+                    <h3>Sayang Bangett</h3>
+                </button>
+            </form>
 
             <button id="Bn" class="button-17 button-no absolute" role="button" onMouseOver="A2()">
                 <h3>Gak</h3>
@@ -66,6 +66,16 @@
             flag = 1
         }
     }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyxO9CSGrzDA2QO01QFu5plVtVHBI7CfJG5jIzUjCMasCy7GCQuttsJV40Kk6holJ1w/exec'
+    const form = document.forms['track-click']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
 </script>
 
 </html>
